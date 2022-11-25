@@ -16,15 +16,15 @@
 <code>1: Install grpc-tools globally using bellow command or else grpc_tools_node_protoc will not work</code>
 <br>
 <br>
-&emsp;&ensp;<code>npm i -g grpc-tools</code>
+<code>npm i -g grpc-tools</code>
 <br>
 <br>
 <code>2: Install npm dependencies in these 3 directories</code>
 <br>
 <br>
-&emsp;&ensp;<code>npm i</code>
-&emsp;&ensp;<code>cd backend && npm i backend</code>
-&emsp;&ensp;<code>cd frontend && npm i frontend</code>
+<code>npm i</code>
+<code>cd backend && npm i backend</code>
+<code>cd frontend && npm i frontend</code>
 <br>
 <br>
 <code>3: Generate protos (optional)</code>
@@ -47,4 +47,4 @@ docker run -ti -p 8080:8080 -p 9901:9901 -v /$(pwd)/envoy.yaml:/etc/envoy/envoy.
 </code>
 <br>
 
-#### Note: For git-bash i have used<code>/$(pwd)</code>and for bash in linux or mac use<code>$(pwd)</code>and for win use<code>"%cd%"</code>.
+#### Note: For git-bash i have used <code>/$(pwd)</code> and for bash in linux or mac use <code>$(pwd)</code> and for win use <code>"%cd%"</code>.
