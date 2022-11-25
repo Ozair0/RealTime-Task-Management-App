@@ -1,0 +1,18 @@
+{
+  "name": "realtime-task-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "backend": "cd backend && pnpm dev",
+    "frontend": "cd frontend && pnpm dev",
+    "gen-proto": "bash generate_proto.sh",
+    "dev": "concurrently \"pnpm backend\" \"pnpm frontend\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

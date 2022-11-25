@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package task;
+
+message Task {
+  int32 id = 1;
+  string title = 2;
+  string body = 3;
+  string status = 4;
+}
+
+message TaskRequest {
+  int32 id = 1;
+}
+
+message TaskResponse {
+  Task task = 1;
+}
+
+message EmptyRequest{}
+message EmptyResponse{
+  string message = 1;
+}
+
+message TasksRequest {}
+
+message TasksResponse {
+  repeated Task tasks = 1;
+}
+
+message AddTaskRequest {
+  string title = 1;
+  string body = 2;
+  string status = 3;
+}
+
+message AddTaskResponse {
+  Task task = 1;
+}
+
+message DeleteTaskRequest {
+  int32 id = 1;
+}
+
+message DeleteTaskResponse {
+  string message = 1;
+}
+
+message UpdateTaskRequest {
+  Task task = 1;
+}
+
+message UpdateTaskResponse {
+  Task task = 1;
+}
+
+
+
+service TaskService {
+  rpc GetTask(TaskRequest) returns (TaskResponse) {};
+  rpc AddTask(AddTaskRequest) returns (AddTaskResponse) {};
+  rpc DeleteTask(DeleteTaskRequest) returns (DeleteTaskResponse) {};
+  rpc UpdateTask(UpdateTaskRequest) returns (UpdateTaskResponse) {};
+  rpc DeleteUnUsedConnections(EmptyRequest) returns (EmptyResponse) {};
+
+  rpc GetAllTasks(TasksRequest) returns (stream TasksResponse) {};
+}

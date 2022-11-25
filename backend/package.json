@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev server.ts",
+    "start": "ts-node server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.1",
+    "@types/bcrypt": "^5.0.0",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/node": "^18.11.9",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "google-protobuf": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "prisma": "^4.6.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.7.3",
+    "@prisma/client": "^4.6.1"
+  }
+}
